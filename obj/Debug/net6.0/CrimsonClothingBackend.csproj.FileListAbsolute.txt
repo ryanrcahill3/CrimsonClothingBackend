@@ -1,0 +1,7 @@
+C:\Users\donna\OneDrive - The University of Alabama\MIS321\CrimsonClothing\CrimsonClothingBackend\obj\Debug\net6.0\CrimsonClothingBackend.csproj.AssemblyReference.cache
+C:\Users\donna\OneDrive - The University of Alabama\MIS321\CrimsonClothing\CrimsonClothingBackend\obj\Debug\net6.0\CrimsonClothingBackend.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\donna\OneDrive - The University of Alabama\MIS321\CrimsonClothing\CrimsonClothingBackend\obj\Debug\net6.0\CrimsonClothingBackend.AssemblyInfoInputs.cache
+C:\Users\donna\OneDrive - The University of Alabama\MIS321\CrimsonClothing\CrimsonClothingBackend\obj\Debug\net6.0\CrimsonClothingBackend.AssemblyInfo.cs
+C:\Users\donna\OneDrive - The University of Alabama\MIS321\CrimsonClothing\CrimsonClothingBackend\obj\Debug\net6.0\CrimsonClothingBackend.csproj.CoreCompileInputs.cache
+C:\Users\donna\OneDrive - The University of Alabama\MIS321\CrimsonClothing\CrimsonClothingBackend\obj\Debug\net6.0\CrimsonClothingBackend.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\donna\OneDrive - The University of Alabama\MIS321\CrimsonClothing\CrimsonClothingBackend\obj\Debug\net6.0\CrimsonClothingBackend.MvcApplicationPartsAssemblyInfo.cache
