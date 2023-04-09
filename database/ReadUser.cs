@@ -22,7 +22,7 @@ namespace api.database
 
             while (rdr.Read())
             {
-                User temp = new User() { UserID = rdr.GetInt32(0), FullName = rdr.GetString(1), Password = rdr.GetString(2), Email = rdr.GetString(3), Role = rdr.GetInt32(4), IsBanned = rdr.GetBoolean(5) };
+                User temp = new User() { ID = rdr.GetInt32(0), FullName = rdr.GetString(1), Password = rdr.GetString(2), Email = rdr.GetString(3), Role = rdr.GetInt32(4), IsBanned = rdr.GetBoolean(5) };
                 allUsers.Add(temp);
             }
 

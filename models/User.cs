@@ -5,7 +5,7 @@ namespace api.models
 {
     public class User
     {
-        public int UserID { get; set; }
+        public int ID { get; set; }
 
         public string FullName { get; set; }
 
@@ -26,7 +26,7 @@ namespace api.models
 
         public override string ToString()
         {
-            return "User ID: " + UserID + ", full name: " + FullName + ", password: " + Password + ", email: " + Email + ", role: " + Role + ", is banned: " + IsBanned;
+            return "User ID: " + ID + ", full name: " + FullName + ", password: " + Password + ", email: " + Email + ", role: " + Role + ", is banned: " + IsBanned;
         }
 
     }
