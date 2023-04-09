@@ -1,3 +1,5 @@
+using api.database;
+using api.models;
 using Microsoft.AspNetCore.Cors;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -40,3 +42,7 @@ app.UseCors("OpenPolicy");
 app.MapControllers();
 
 app.Run();
+
+Clothing myClothing = new Clothing() { Title = "My Title", Type = "My Type", Occasion = "My Occasion", Size = "My Size" };
+
+myClothing.Save.CreateClothing(myClothing);

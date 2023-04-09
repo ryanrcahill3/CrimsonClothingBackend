@@ -1,6 +1,6 @@
-using CrimsonClothingBackend.models;
+using api.models;
 
-namespace CrimsonClothingBackend.interfaces
+namespace api.interfaces
 {
     public interface ISaveClothing
     {

@@ -1,7 +1,7 @@
-using CrimsonClothingBackend.database;
-using CrimsonClothingBackend.interfaces;
+using api.database;
+using api.interfaces;
 
-namespace CrimsonClothingBackend.models
+namespace api.models
 {
     public class Clothing
     {
@@ -13,8 +13,6 @@ namespace CrimsonClothingBackend.models
 
         public string Occasion { get; set; }
 
-        public double Discount { get; set; }
-
         public string Size { get; set; }
 
         public int UserID { get; set; } // foreign key
@@ -22,6 +20,10 @@ namespace CrimsonClothingBackend.models
         public int TransactionID { get; set; } // foreign key
 
         public ISaveClothing Save { get; set; }
+
+        public bool IsNew { get; set; }
+
+        public bool IsDeleted { get; set; }
         public Clothing()
         {
             Save = new SaveClothing();
@@ -30,7 +32,7 @@ namespace CrimsonClothingBackend.models
 
         public override string ToString()
         {
-            return "ID: " + ID + " " + Title + ", type: " + Type + ", occasion: " + Occasion + ", discount: " + Discount + ", size: " + Size + ", user ID: " + UserID + ", transaction ID: " + TransactionID;
+            return "ID: " + ID + " " + Title + ", type: " + Type + ", occasion: " + Occasion + ", size: " + Size + ", user ID: " + UserID + ", transaction ID: " + TransactionID + ", is new: " + IsNew + ", is deleted: " + IsDeleted;
         }
 
     }

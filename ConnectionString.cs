@@ -1,4 +1,4 @@
-namespace CrimsonClothingBackend
+namespace api
 {
     public class ConnectionString
     {
