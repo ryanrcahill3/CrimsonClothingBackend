@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wiq3xiYceCsifxfNU5OPIOfAXce89OViFGtioayN0eqysmW10Mqpx+REkM+Dq6DtfKNeLt/TfdwdQVI6oz2NKA==",
+  "dgSpecHash": "jtSS2ZpTuGfSuIpBoe8KhyBfxBRTW0GxUoqEGof+EZE8YGXNkZZ6zN0dd5BTeCw5NIH6PkUqHdxZz9OkZNH0wA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\donna\\OneDrive - The University of Alabama\\MIS321\\CrimsonClothing\\CrimsonClothingBackend\\CrimsonClothingBackend.csproj",
+  "projectFilePath": "C:\\Users\\donna\\OneDrive - The University of Alabama\\MIS321\\CrimsonClothing\\api\\CrimsonClothingBackend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\donna\\.nuget\\packages\\google.protobuf\\3.21.9\\google.protobuf.3.21.9.nupkg.sha512",
     "C:\\Users\\donna\\.nuget\\packages\\k4os.compression.lz4\\1.2.6\\k4os.compression.lz4.1.2.6.nupkg.sha512",

@@ -1728,11 +1728,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\donna\\OneDrive - The University of Alabama\\MIS321\\CrimsonClothing\\CrimsonClothingBackend\\CrimsonClothingBackend.csproj",
+      "projectUniqueName": "C:\\Users\\donna\\OneDrive - The University of Alabama\\MIS321\\CrimsonClothing\\api\\CrimsonClothingBackend.csproj",
       "projectName": "CrimsonClothingBackend",
-      "projectPath": "C:\\Users\\donna\\OneDrive - The University of Alabama\\MIS321\\CrimsonClothing\\CrimsonClothingBackend\\CrimsonClothingBackend.csproj",
+      "projectPath": "C:\\Users\\donna\\OneDrive - The University of Alabama\\MIS321\\CrimsonClothing\\api\\CrimsonClothingBackend.csproj",
       "packagesPath": "C:\\Users\\donna\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\donna\\OneDrive - The University of Alabama\\MIS321\\CrimsonClothing\\CrimsonClothingBackend\\obj\\",
+      "outputPath": "C:\\Users\\donna\\OneDrive - The University of Alabama\\MIS321\\CrimsonClothing\\api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\donna\\AppData\\Roaming\\NuGet\\NuGet.Config"
