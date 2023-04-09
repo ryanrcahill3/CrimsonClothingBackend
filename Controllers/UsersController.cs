@@ -8,48 +8,48 @@ using api.models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace api.Controllers
+namespace CrimsonClothingBackend.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ClothingController : ControllerBase
+    public class UsersController : ControllerBase
     {
-        // GET: api/Clothing
+        // GET: api/users
         [HttpGet]
-        public List<Clothing> Get()
+        public List<User> Get()
         {
-            IReadClothing readObject = new ReadClothing();
-            List<Clothing> allClothing = readObject.GetAllClothing();
-            List<Clothing> modifiedClothing = new List<Clothing>();
+            IReadUser readObject = new ReadUser();
+            List<User> allUsers = readObject.GetAllUsers();
+            List<User> modifiedUsers = new List<User>();
 
-            foreach (Clothing clothing in allClothing)
+            foreach (User user in allUsers)
             {
-                modifiedClothing.Add(clothing);
+                modifiedUsers.Add(user);
             }
 
-            return modifiedClothing;
+            return modifiedUsers;
         }
 
-        // GET: api/Clothing/5
-        [HttpGet("{id}", Name = "GetClothingByID")]
+        // GET: api/users/5
+        [HttpGet("{id}", Name = "GetUserByID")]
         public string Get(int id)
         {
             return "value";
         }
 
-        // POST: api/Clothing
+        // POST: api/users
         [HttpPost]
         public void Post([FromBody] string value)
         {
         }
 
-        // PUT: api/Clothing/5
+        // PUT: api/users/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
         {
         }
 
-        // DELETE: api/Clothing/5
+        // DELETE: api/users/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {

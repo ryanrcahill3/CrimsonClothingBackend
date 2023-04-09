@@ -46,3 +46,7 @@ app.Run();
 Clothing myClothing = new Clothing() { Title = "My Title", Type = "My Type", Occasion = "My Occasion", Size = "My Size" };
 
 myClothing.Save.CreateClothing(myClothing);
+
+User myUser = new User() { FullName = "My Full Name", Password = "My Password", Email = "My Email", Role = 1, IsBanned = false };
+
+myUser.Save.CreateUser(myUser);
