@@ -19,6 +19,10 @@ namespace api.models
 
         public int TransactionID { get; set; } // foreign key
 
+        public double buyPrice { get; set; }
+
+        public string ImageURL { get; set; }
+
         public ISaveClothing Save { get; set; }
 
         public bool IsNew { get; set; }

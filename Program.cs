@@ -54,3 +54,6 @@ app.Run();
 // Promotion myPromotion = new Promotion() { promoterID = 1, promoteeID = 2, promotionDate = new DateOnly(2021, 10, 10), newRole = 1 };
 
 // myPromotion.Save.CreatePromotion(myPromotion);
+
+Offer myOffer = new Offer() { CustomerID = 1, ClothingID = 1 };
+myOffer.Save.CreateOffer(myOffer);

@@ -23,7 +23,16 @@ namespace api.database
 
             while (rdr.Read())
             {
-                Clothing temp = new Clothing() { ID = rdr.GetInt32(0), Title = rdr.GetString(1), Type = rdr.GetString(2), Occasion = rdr.GetString(3), Size = rdr.GetString(4) };
+                Clothing temp = new Clothing()
+                {
+                    ID = rdr.GetInt32(0),
+                    Title = rdr.GetString(1),
+                    Type = rdr.GetString(2),
+                    Occasion = rdr.GetString(3),
+                    Size = rdr.GetString(4),
+                    buyPrice = rdr.GetDouble(5),
+                    ImageURL = rdr.GetString(6)
+                };
                 allClothing.Add(temp);
             }
 
