@@ -25,12 +25,15 @@ namespace api.models
 
         public ISaveClothing Save { get; set; }
 
+        public IUpdateClothing Update { get; set; }
+
         public bool IsNew { get; set; }
 
         public bool IsDeleted { get; set; }
         public Clothing()
         {
             Save = new SaveClothing();
+            Update = new UpdateClothing();
 
         }
 

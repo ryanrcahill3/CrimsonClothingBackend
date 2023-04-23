@@ -32,16 +32,28 @@ namespace CrimsonClothingBackend.Controllers
 
         // GET: api/Promotion/5
         [HttpGet("{id}", Name = "GetPromotionByID")]
-        public string Get(int id)
+        public IActionResult Get(int id)
         {
-            return "value";
+            IReadPromotions readObject = new ReadPromotions();
+            List<Promotion> allPromotion = readObject.GetPromotions();
+
+            Promotion promotion = allPromotion.FirstOrDefault(s => s.ID == id);
+
+            if (promotion == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(promotion);
         }
 
         // POST: api/Promotion
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post(Promotion value)
         {
+            value.Save.CreatePromotion(value);
         }
+
 
         // PUT: api/Promotion/5
         [HttpPut("{id}")]

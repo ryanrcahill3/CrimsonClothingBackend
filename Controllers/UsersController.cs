@@ -32,22 +32,36 @@ namespace CrimsonClothingBackend.Controllers
 
         // GET: api/users/5
         [HttpGet("{id}", Name = "GetUserByID")]
-        public string Get(int id)
+        public IActionResult Get(int id)
         {
-            return "value";
+            IReadUser readObject = new ReadUser();
+            List<User> allUser = readObject.GetAllUsers();
+
+            User user = allUser.FirstOrDefault(s => s.ID == id);
+
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(user);
         }
 
         // POST: api/users
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post(User value)
         {
+            value.Save.CreateUser(value);
         }
+
 
         // PUT: api/users/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public void Put(User value)
         {
+            value.Update.EditUser(value);
         }
+
 
         // DELETE: api/users/5
         [HttpDelete("{id}")]

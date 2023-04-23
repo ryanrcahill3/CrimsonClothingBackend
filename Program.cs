@@ -55,5 +55,5 @@ app.Run();
 
 // myPromotion.Save.CreatePromotion(myPromotion);
 
-Offer myOffer = new Offer() { CustomerID = 1, ClothingID = 1 };
-myOffer.Save.CreateOffer(myOffer);
+// Offer myOffer = new Offer() { CustomerID = 1, ClothingID = 1 };
+// myOffer.Save.CreateOffer(myOffer);

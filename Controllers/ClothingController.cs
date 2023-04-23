@@ -32,22 +32,36 @@ namespace api.Controllers
 
         // GET: api/Clothing/5
         [HttpGet("{id}", Name = "GetClothingByID")]
-        public string Get(int id)
+        public IActionResult Get(int id)
         {
-            return "value";
+            IReadClothing readObject = new ReadClothing();
+            List<Clothing> allClothing = readObject.GetAllClothing();
+
+            Clothing clothing = allClothing.FirstOrDefault(s => s.ID == id);
+
+            if (clothing == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(clothing);
         }
 
         // POST: api/Clothing
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post(Clothing value)
         {
+            value.Save.CreateClothing(value);
         }
 
         // PUT: api/Clothing/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public void Put(Clothing value)
         {
+            value.Update.EditClothing(value);
         }
+
+
 
         // DELETE: api/Clothing/5
         [HttpDelete("{id}")]

@@ -13,9 +13,12 @@ namespace api.models
 
         public ISaveOffers Save { get; set; }
 
+        public IUpdateOffers Update { get; set; }
+
         public Offer()
         {
             Save = new SaveOffers();
+            Update = new UpdateOffers();
         }
 
         public override string ToString()

@@ -4,7 +4,7 @@ using MySql.Data.MySqlClient;
 
 namespace api.database
 {
-    public class SaveUser : ISaveUser
+    public class SaveUser : ISaveUsers
     {
         public void CreateUser(User myUser)
         {

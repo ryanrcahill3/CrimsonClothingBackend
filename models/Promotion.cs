@@ -17,6 +17,7 @@ namespace api.models
 
         public ISavePromotions Save { get; set; }
 
+
         public Promotion()
         {
             Save = new SavePromotion();

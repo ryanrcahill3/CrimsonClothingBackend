@@ -1,3 +1,6 @@
+using api.database;
+using api.interfaces;
+
 namespace api.models
 {
     public class Transaction
@@ -11,6 +14,16 @@ namespace api.models
         public int UserID { get; set; } // foreign key
 
         public int ClothingID { get; set; } // foreign key
+
+        public ISaveTransactions Save { get; set; }
+
+        public IUpdateTransactions Update { get; set; }
+
+        public Transaction()
+        {
+            Save = new SaveTransactions();
+            Update = new UpdateTransactions();
+        }
 
 
 

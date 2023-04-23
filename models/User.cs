@@ -17,11 +17,14 @@ namespace api.models
 
         public bool IsBanned { get; set; }
 
-        public ISaveUser Save { get; set; }
+        public ISaveUsers Save { get; set; }
+
+        public IUpdateUsers Update { get; set; }
 
         public User()
         {
             Save = new SaveUser();
+            Update = new UpdateUser();
         }
 
         public override string ToString()

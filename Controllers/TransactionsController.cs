@@ -32,21 +32,34 @@ namespace CrimsonClothingBackend.Controllers
 
         // GET: api/Transactions/5
         [HttpGet("{id}", Name = "GetAllTransactions")]
-        public string Get(int id)
+        public IActionResult Get(int id)
         {
-            return "value";
+            IReadTransactions readObject = new ReadTransactions();
+            List<Transaction> allTransaction = readObject.GetAllTransactions();
+
+            Transaction transaction = allTransaction.FirstOrDefault(s => s.ID == id);
+
+            if (transaction == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(transaction);
         }
 
         // POST: api/Transactions
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post(Transaction value)
         {
+            value.Save.CreateTransaction(value);
         }
+
 
         // PUT: api/Transactions/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public void Put(Transaction value)
         {
+            value.Update.EditTransaction(value);
         }
 
         // DELETE: api/Transactions/5
