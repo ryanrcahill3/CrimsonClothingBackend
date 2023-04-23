@@ -6,7 +6,7 @@ namespace api.models
 
         public double Price { get; set; }
 
-        public string Date { get; set; }
+        public DateOnly Date { get; set; }
 
         public int UserID { get; set; } // foreign key
 

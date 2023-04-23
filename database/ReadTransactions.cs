@@ -22,7 +22,7 @@ namespace api.database
 
             while (rdr.Read())
             {
-                Transaction temp = new Transaction() { ID = rdr.GetInt32(0), Price = rdr.GetDouble(1), Date = rdr.GetString(2), UserID = rdr.GetInt32(3), ClothingID = rdr.GetInt32(4) };
+                Transaction temp = new Transaction() { ID = rdr.GetInt32(0), Price = rdr.GetDouble(1), Date = DateOnly.FromDateTime(rdr.GetDateTime(2)), UserID = rdr.GetInt32(3), ClothingID = rdr.GetInt32(4) };
                 allTransactions.Add(temp);
             }
 

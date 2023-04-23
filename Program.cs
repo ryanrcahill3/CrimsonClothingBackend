@@ -50,3 +50,7 @@ app.Run();
 // User myUser = new User() { FullName = "My Full Name", Password = "My Password", Email = "My Email", Role = 1, IsBanned = false };
 
 // myUser.Save.CreateUser(myUser);
+
+// Promotion myPromotion = new Promotion() { promoterID = 1, promoteeID = 2, promotionDate = new DateOnly(2021, 10, 10), newRole = 1 };
+
+// myPromotion.Save.CreatePromotion(myPromotion);
