@@ -13,7 +13,7 @@ namespace api.database
             using var con = new MySqlConnection(cs);
             con.Open();
 
-            string stm = @"UPDATE clothing set Title = @title, Type = @type, Occasion = @occasion, Size = @size, UserID = @userid, TransactionID = @transactionid, buyPrice = @buyprice, ImageURL = @imageurl, IsNew = @isnew, IsDeleted = @isdeleted where ID = @id";
+            string stm = @"UPDATE clothing set Title = @title, Type = @type, Occasion = @occasion, Size = @size, UserID = @userid, TransactionID = @transactionid, IsApproved = @isApproved, IsDeleted = @isdeleted, ImageURL = @imageurl, BuyPrice = @buyprice where ID = @id";
 
             using var cmd = new MySqlCommand(stm, con);
 
@@ -24,10 +24,11 @@ namespace api.database
             cmd.Parameters.AddWithValue("@size", value.Size);
             cmd.Parameters.AddWithValue("@userid", value.UserID);
             cmd.Parameters.AddWithValue("@transactionid", value.TransactionID);
-            cmd.Parameters.AddWithValue("@buyprice", value.buyPrice);
-            cmd.Parameters.AddWithValue("@imageurl", value.ImageURL);
-            cmd.Parameters.AddWithValue("@isnew", value.IsNew);
+            cmd.Parameters.AddWithValue("@isApproved", value.IsApproved);
             cmd.Parameters.AddWithValue("@isdeleted", value.IsDeleted);
+            cmd.Parameters.AddWithValue("@imageurl", value.ImageURL);
+            cmd.Parameters.AddWithValue("@buyprice", value.buyPrice);
+
 
             cmd.Prepare();
             cmd.ExecuteNonQuery();

@@ -15,11 +15,11 @@ namespace api.models
 
         public string Size { get; set; }
 
-        public int UserID { get; set; } // foreign key
+        public int? UserID { get; set; } // foreign key
 
-        public int TransactionID { get; set; } // foreign key
+        public int? TransactionID { get; set; } // foreign key
 
-        public double buyPrice { get; set; }
+        public double? buyPrice { get; set; }
 
         public string ImageURL { get; set; }
 
@@ -27,7 +27,7 @@ namespace api.models
 
         public IUpdateClothing Update { get; set; }
 
-        public bool IsNew { get; set; }
+        public bool IsApproved { get; set; }
 
         public bool IsDeleted { get; set; }
         public Clothing()
@@ -39,8 +39,7 @@ namespace api.models
 
         public override string ToString()
         {
-            return "ID: " + ID + " " + Title + ", type: " + Type + ", occasion: " + Occasion + ", size: " + Size + ", user ID: " + UserID + ", transaction ID: " + TransactionID + ", is new: " + IsNew + ", is deleted: " + IsDeleted;
+            return "Clothing ID: " + ID + ", title: " + Title + ", type: " + Type + ", occasion: " + Occasion + ", size: " + Size + ", user ID: " + UserID + ", transaction ID: " + TransactionID + ", buy price: " + buyPrice + ", image URL: " + ImageURL + ", is approved: " + IsApproved + ", is deleted: " + IsDeleted;
         }
-
     }
 }

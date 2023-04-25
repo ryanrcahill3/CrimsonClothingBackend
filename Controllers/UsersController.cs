@@ -47,6 +47,24 @@ namespace CrimsonClothingBackend.Controllers
             return Ok(user);
         }
 
+        [HttpGet("byemail/{email}", Name = "GetUserByEmail")]
+        public IActionResult GetByEmail(string email)
+        {
+            IReadUser readObject = new ReadUser();
+            List<User> allUsers = readObject.GetAllUsers();
+
+            User user = allUsers.FirstOrDefault(s => s.Email.Equals(email, StringComparison.OrdinalIgnoreCase));
+
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(user);
+        }
+
+
+
         // POST: api/users
         [HttpPost]
         public void Post(User value)
