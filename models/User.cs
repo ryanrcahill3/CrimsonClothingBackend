@@ -32,5 +32,15 @@ namespace api.models
             return "User ID: " + ID + ", full name: " + FullName + ", password: " + Password + ", email: " + Email + ", role: " + Role + ", is banned: " + IsBanned;
         }
 
+        public void SetEmployee()
+        {
+            Role = 2;
+        }
+
+        public void SetManager()
+        {
+            Role = 3;
+        }
+
     }
 }

@@ -13,7 +13,7 @@ namespace api.database
             using var con = new MySqlConnection(cs);
             con.Open();
 
-            string stm = @"UPDATE Users set FullName = @fullname, Password = @password, Email = @email, Role = @role where ID = @id IsBanned = @isbanned";
+            string stm = @"UPDATE Users set FullName = @fullname, Password = @password, Email = @email, Role = @role, IsBanned = @isbanned where ID = @id ";
 
             using var cmd = new MySqlCommand(stm, con);
 

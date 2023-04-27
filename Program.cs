@@ -57,3 +57,20 @@ app.Run();
 
 // Offer myOffer = new Offer() { CustomerID = 1, ClothingID = 1 };
 // myOffer.Save.CreateOffer(myOffer);
+
+List<User> allUsers = new List<User>();
+ReadUser readUser = new ReadUser();
+allUsers = readUser.GetAllUsers();
+foreach (User user in allUsers)
+{
+    if (user.Email == "manager@crimsonclothing.com")
+    {
+        user.SetManager();
+        user.Update.EditUser(user);
+    }
+    else if (user.Email == "ryanrcahill@gmail.com")
+    {
+        user.SetEmployee();
+        user.Update.EditUser(user);
+    }
+}
