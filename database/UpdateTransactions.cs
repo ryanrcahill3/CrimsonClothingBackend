@@ -13,14 +13,15 @@ namespace api.database
             using var con = new MySqlConnection(cs);
             con.Open();
 
-            string stm = @"UPDATE transactions set Price = @price, UserID = @userid, ClothingID = @clothing, Date = @date where ID = @id";
+            string stm = @"UPDATE transactions set Price = @price, UserID = @userid, Date = @date where ID = @id";
 
             using var cmd = new MySqlCommand(stm, con);
 
             cmd.Parameters.AddWithValue("@id", value.ID);
             cmd.Parameters.AddWithValue("@price", value.Price);
+            cmd.Parameters.AddWithValue("@date", value.Date);
             cmd.Parameters.AddWithValue("@userid", value.UserID);
-            cmd.Parameters.AddWithValue("@clothingid", value.ClothingID);
+
 
 
             cmd.Prepare();
