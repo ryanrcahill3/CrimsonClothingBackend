@@ -21,6 +21,8 @@ namespace api.models
 
         public double? buyPrice { get; set; }
 
+        public double? sellPrice { get; set; }
+
         public string ImageURL { get; set; }
 
         public ISaveClothing Save { get; set; }

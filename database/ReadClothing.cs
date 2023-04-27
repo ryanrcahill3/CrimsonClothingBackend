@@ -34,7 +34,8 @@ namespace api.database
                     IsApproved = rdr.GetBoolean(7),
                     IsDeleted = rdr.GetBoolean(8),
                     ImageURL = rdr.IsDBNull(9) ? null : rdr.GetString(9),
-                    buyPrice = rdr.IsDBNull(10) ? null : rdr.GetDouble(10)
+                    buyPrice = rdr.IsDBNull(10) ? null : rdr.GetDouble(10),
+                    sellPrice = rdr.IsDBNull(11) ? null : rdr.GetDouble(11),
 
 
                 };

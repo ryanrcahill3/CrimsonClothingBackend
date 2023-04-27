@@ -13,7 +13,7 @@ namespace api.database
             using var con = new MySqlConnection(cs);
             con.Open();
 
-            string stm = @"UPDATE clothing set Title = @title, Type = @type, Occasion = @occasion, Size = @size, UserID = @userid, TransactionID = @transactionid, IsApproved = @isApproved, IsDeleted = @isdeleted, ImageURL = @imageurl, BuyPrice = @buyprice where ID = @id";
+            string stm = @"UPDATE clothing set Title = @title, Type = @type, Occasion = @occasion, Size = @size, UserID = @userid, TransactionID = @transactionid, IsApproved = @isApproved, IsDeleted = @isdeleted, ImageURL = @imageurl, BuyPrice = @buyprice, SellPrice = @sellprice where ID = @id";
 
             using var cmd = new MySqlCommand(stm, con);
 
@@ -28,6 +28,7 @@ namespace api.database
             cmd.Parameters.AddWithValue("@isdeleted", value.IsDeleted);
             cmd.Parameters.AddWithValue("@imageurl", value.ImageURL);
             cmd.Parameters.AddWithValue("@buyprice", value.buyPrice);
+            cmd.Parameters.AddWithValue("@sellprice", value.sellPrice);
 
 
             cmd.Prepare();
