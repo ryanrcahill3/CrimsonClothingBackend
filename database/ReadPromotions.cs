@@ -19,14 +19,14 @@ namespace api.database
             using var con = new MySqlConnection(cs);
             con.Open();
 
-            string stm = "SELECT * FROM promotion";
+            string stm = "SELECT * FROM promotions";
             using var cmd = new MySqlCommand(stm, con);
 
             using MySqlDataReader rdr = cmd.ExecuteReader();
 
             while (rdr.Read())
             {
-                Promotion temp = new Promotion() { ID = rdr.GetInt32(0), promoterID = rdr.GetInt32(1), promoteeID = rdr.GetInt32(2), promotionDate = DateOnly.FromDateTime(rdr.GetDateTime(3)), newRole = rdr.GetInt32(4) };
+                Promotion temp = new Promotion() { ID = rdr.GetInt32(0), promoterID = rdr.GetInt32(1), promoteeID = rdr.GetInt32(2), promotionDate = rdr.GetDateTime(3), newRole = rdr.GetInt32(4) };
                 allPromotions.Add(temp);
             }
 

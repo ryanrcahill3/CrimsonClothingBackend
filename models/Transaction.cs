@@ -14,6 +14,7 @@ namespace api.models
         public int UserID { get; set; } // foreign key
 
 
+
         public ISaveTransactions Save { get; set; }
 
         public IUpdateTransactions Update { get; set; }

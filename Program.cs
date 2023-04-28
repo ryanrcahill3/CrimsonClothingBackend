@@ -63,14 +63,10 @@ ReadUser readUser = new ReadUser();
 allUsers = readUser.GetAllUsers();
 foreach (User user in allUsers)
 {
-    if (user.Email == "manager@crimsonclothing.com")
+    if (user.Email == "My Email" || user.Email == "ryanrcahill@gmail.com")
     {
-        user.SetManager();
+        user.IsBanned = true;
         user.Update.EditUser(user);
     }
-    else if (user.Email == "ryanrcahill@gmail.com")
-    {
-        user.SetEmployee();
-        user.Update.EditUser(user);
-    }
+
 }

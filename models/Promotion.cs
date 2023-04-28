@@ -11,7 +11,7 @@ namespace api.models
 
         public int promoteeID { get; set; }
 
-        public DateOnly promotionDate { get; set; }
+        public DateTime promotionDate { get; set; }
 
         public int newRole { get; set; }
 

@@ -51,6 +51,7 @@ namespace CrimsonClothingBackend.Controllers
         [HttpPost]
         public void Post(Promotion value)
         {
+            value.promotionDate = DateTime.Now;
             value.Save.CreatePromotion(value);
         }
 

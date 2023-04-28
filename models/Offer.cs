@@ -11,6 +11,8 @@ namespace api.models
 
         public int ClothingID { get; set; }
 
+        public string ImageURL { get; set; }
+
         public ISaveOffers Save { get; set; }
 
         public IUpdateOffers Update { get; set; }

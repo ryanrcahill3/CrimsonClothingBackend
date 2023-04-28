@@ -58,8 +58,6 @@ namespace api.Controllers
         [HttpPut("{id}")]
         public void Put(Clothing value)
         {
-            System.Console.WriteLine("Put method called");
-            System.Console.WriteLine(value.ToString());
             value.Update.EditClothing(value);
         }
 

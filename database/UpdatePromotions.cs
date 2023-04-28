@@ -12,7 +12,7 @@ namespace api.database
             using var con = new MySqlConnection(cs);
             con.Open();
 
-            string stm = @"UPDATE promotion set CustomerID = @customerid, ClothingID = @clothingid where ID = @id";
+            string stm = @"UPDATE promotions set CustomerID = @customerid, ClothingID = @clothingid where ID = @id";
 
             using var cmd = new MySqlCommand(stm, con);
 

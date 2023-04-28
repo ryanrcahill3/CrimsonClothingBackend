@@ -51,8 +51,8 @@ namespace CrimsonClothingBackend.Controllers
         [HttpPost]
         public void Post(Transaction value)
         {
-            System.Console.WriteLine("Post method called");
-            System.Console.WriteLine(value);
+
+            value.Date = DateTime.Now;
             value.Save.CreateTransaction(value);
         }
 

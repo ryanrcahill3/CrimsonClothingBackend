@@ -13,7 +13,7 @@ namespace api.database
             using var con = new MySqlConnection(cs);
             con.Open();
 
-            string stm = @"INSERT INTO offers(customerID, clothingID) VALUES(@customerID, @clothingID)";
+            string stm = @"INSERT INTO offers(customerID, clothingID, imageURL) VALUES(@customerID, @clothingID, @imageURL)";
 
             using var cmd = new MySqlCommand(stm, con);
 
@@ -21,6 +21,8 @@ namespace api.database
             System.Console.WriteLine(myOffer.CustomerID);
             cmd.Parameters.AddWithValue("@clothingID", myOffer.ClothingID);
             System.Console.WriteLine(myOffer.ClothingID);
+            cmd.Parameters.AddWithValue("@imageURL", myOffer.ImageURL);
+            System.Console.WriteLine(myOffer.ImageURL);
 
             cmd.Prepare();
 
