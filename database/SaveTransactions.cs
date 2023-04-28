@@ -13,7 +13,7 @@ namespace api.database
             using var con = new MySqlConnection(cs);
             con.Open();
 
-            string stm = @"INSERT INTO transactions(price, userID, date) VALUES(@price, @userid, @date)";
+            string stm = @"INSERT INTO transactions(price, userID date) VALUES(@price, @userid, @date)";
 
             using var cmd = new MySqlCommand(stm, con);
 
